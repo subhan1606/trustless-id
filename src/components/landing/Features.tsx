@@ -84,7 +84,10 @@ export function Features() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="glass rounded-xl p-6 hover:glow-primary transition-all duration-300 group"
+                            className="group p-6 rounded-2xl bg-card/30 border border-white/5 
+                                hover:border-primary/30 hover:bg-card/50 
+                                transition-all duration-300 
+                                hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
                         >
                             {/* Icon */}
                             <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform shadow-lg`}>

@@ -61,12 +61,12 @@ export function HowItWorks() {
                             key={index}
                             className="relative group"
                         >
-                            {/* Connection line */}
-                            {index < steps.length - 1 && (
-                                <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-primary/50 to-transparent z-0" />
-                            )}
 
-                            <div className="glass rounded-2xl p-8 h-full hover:glow-primary transition-all duration-300 relative z-10">
+
+                            <div className="p-8 h-full relative z-10 rounded-2xl bg-card/30 border border-white/5 
+                                hover:border-primary/30 hover:bg-card/50 
+                                transition-all duration-300 
+                                hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
                                 {/* Step number */}
                                 <div className="absolute -top-4 -left-4 w-12 h-12 gradient-primary rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
                                     {step.number}
