@@ -150,7 +150,11 @@ export default function CreateIdentityPage() {
     };
 
     const handleBack = () => {
-        setCurrentStep((prev) => Math.max(prev - 1, 1) as Step);
+        if (currentStep === 1) {
+            router.push('/dashboard');
+        } else {
+            setCurrentStep((prev) => Math.max(prev - 1, 1) as Step);
+        }
     };
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -494,8 +498,12 @@ export default function CreateIdentityPage() {
                                         <Button
                                             variant="ghost"
                                             onClick={handleBack}
-                                            disabled={currentStep === 1 || isProcessing}
+                                            disabled={isProcessing}
+                                            className="gap-2"
                                         >
+                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                            </svg>
                                             Back
                                         </Button>
                                         <Button
